@@ -19,12 +19,15 @@ const c = config;
   
   app.use(bodyParser.json());
 
-  app.use(cors({
-    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "X-Access-Token", "Authorization"],
-    methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-    origin: c.url
-  }));
-
+  app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+    next();
+  });
+  
   app.use('/api/v0/', IndexRouter);
 
   // Root URI call

@@ -7,7 +7,7 @@ data:
   JWT_SECRET: hello
   POSTGRES_DB: postgres
   POSTGRES_HOST: db.cgef3h2i7elv.us-east-1.rds.amazonaws.com
-  URL: http://reverseproxy:8010  
+  URL: http://a2bae32e1ade44c0c9fe82e9314dbe2c-543135820.us-east-1.elb.amazonaws.com:8010  
 metadata:
   name: env-config
   

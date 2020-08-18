@@ -3,7 +3,7 @@ services:
 
   reverseproxy:
       build: ./nginx
-      image: reverseproxy
+      image: blumup/reverseproxy
       ports:
           - 8080:8080
       restart: always
@@ -13,7 +13,7 @@ services:
 
   backend-user:
     build: ./backend-api-user
-    image: backend-api-user
+    image: blumup/backend-api-user
     environment:
       POSTGRES_USERNAME: $POSTGRES_USERNAME
       POSTGRES_PASSWORD: $POSTGRES_PASSWORD 
@@ -27,7 +27,7 @@ services:
 
   backend-feed:
     build: ./backend-api-feed
-    image: backend-api-feed
+    image: blumup/backend-api-feed
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
@@ -43,6 +43,6 @@ services:
 
   frontend:
     build: ./frontend
-    image: frontend
+    image: blumup/frontend
     ports:
       - "8100:80"

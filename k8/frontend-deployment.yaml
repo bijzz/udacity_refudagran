@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: frontend
+  name: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+ #     name: frontend
+      app: frontend
+  template:
+    metadata:
+      labels:
+        #service: frontend
+        #api: external 
+        #name: frontend       
+        app: frontend
+    spec:
+      containers:
+      - image: frontend:latest
+        name: frontend
+        #imagePullPolicy: Always          
+        imagePullPolicy: IfNotPresent 
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"                
+      restartPolicy: Always
+

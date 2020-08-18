@@ -19,7 +19,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: frontend:latest
+      - image: blumup/frontend
         name: frontend
         #imagePullPolicy: Always          
         imagePullPolicy: IfNotPresent 

@@ -15,7 +15,7 @@ spec:
         app: backend-user
     spec:
       containers:
-      - image: backend-api-user
+      - image: blumup/backend-api-user
         name: backend-user 
         imagePullPolicy: IfNotPresent 
         resources:

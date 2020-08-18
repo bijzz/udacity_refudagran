@@ -15,7 +15,7 @@ spec:
         app: backend-feed
     spec:
       containers:
-      - image: backend-api-feed
+      - image: blumup/backend-api-feed
         name: backend-feed
         imagePullPolicy: IfNotPresent 
         #imagePullPolicy: Always  

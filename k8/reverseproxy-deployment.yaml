@@ -17,7 +17,8 @@ spec:
       containers:
       - image: blumup/reverseproxy
         name: reverseproxy
-        imagePullPolicy: IfNotPresent          
+        #imagePullPolicy: IfNotPresent    
+        imagePullPolicy: Always        
         resources:
           requests:
             memory: "64Mi"

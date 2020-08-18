@@ -17,8 +17,8 @@ spec:
       containers:
       - image: blumup/backend-api-feed
         name: backend-feed
-        imagePullPolicy: IfNotPresent 
-        #imagePullPolicy: Always  
+        #imagePullPolicy: IfNotPresent 
+        imagePullPolicy: Always  
         resources:
           requests:
             memory: "64Mi"

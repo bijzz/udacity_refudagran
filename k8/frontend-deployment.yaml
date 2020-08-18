@@ -8,21 +8,17 @@ spec:
   replicas: 1
   selector:
     matchLabels:
- #     name: frontend
       app: frontend
   template:
     metadata:
-      labels:
-        #service: frontend
-        #api: external 
-        #name: frontend       
+      labels:    
         app: frontend
     spec:
       containers:
       - image: blumup/frontend
         name: frontend
-        #imagePullPolicy: Always          
-        imagePullPolicy: IfNotPresent 
+        imagePullPolicy: Always          
+        #imagePullPolicy: IfNotPresent 
         ports:
         - containerPort: 80
         resources:

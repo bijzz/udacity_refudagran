@@ -42,15 +42,15 @@ docker-compose up -d # run multi-container app - detached
 
 Runnig docker containers:
 
-![docker.up.png](docs\docker.up.png)
+![docker.up.png](docs/docker.up.png)
 
 Application:
 
-![local.png](docs\local.png)
+![local.png](docs/local.png)
 
 With log output on the terminal via stdout:
 
-![local.term.png](docs\local.term.png)
+![local.term.png](docs/local.term.png)
 
 ## Final Pipeline (Travis CI - Docker Hub - K8)
 
@@ -62,7 +62,7 @@ TravisCI Repo / Continous Integration: [Docker Hub - blumup](https://hub.docker.
 
 All the source code is checked into the repository at [GitHub - bijzz/udacity_refudagran](https://github.com/bijzz/udacity_refudagran)
 
-![](docs\2020-08-19-00-10-56-image.png)
+![](docs/2020-08-19-00-10-56-image.png)
 
 ### TravisCI
 
@@ -70,11 +70,11 @@ Each commit to GitHub triggers a build in TravisCI.
 
 TravisCI will built all docker images and automatically push them to DockerHub [Docker Hub - blumup](https://hub.docker.com/r/blumup/)
 
-![](docs\2020-08-19-00-11-21-image.png)
+![](docs/2020-08-19-00-11-21-image.png)
 
 ### DockerHub
 
-![](docs\2020-08-19-00-09-30-image.png)
+![](docs/2020-08-19-00-09-30-image.png)
 
 ### AWS EKS
 
@@ -99,7 +99,7 @@ kubectl apply -f k8/
 
 Watching the status:
 
-![](docs\2020-08-19-21-43-39-image.png)
+![](docs/2020-08-19-21-43-39-image.png)
 
 Notes:
 
@@ -109,4 +109,4 @@ Notes:
 
 ### Application
 
-![](docs\2020-08-19-21-42-28-image.png)
+![](docs/2020-08-19-21-42-28-image.png)

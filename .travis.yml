@@ -7,8 +7,17 @@ env:
   - DOCKER_COMPOSE_VERSION=1.26.2
 
 before_install:
+  # fetch kubectl
+  # - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+  # - chmod +x ./kubectl
+  # - sudo mv ./kubectl /usr/local/bin/kubectl
+  # fetch aws
+  # - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  # - unzip awscliv2.zip
+  # - sudo ./aws/install  
   - docker -v
   - docker-compose -v
+  # fetch docker-compose
   - sudo rm /usr/local/bin/docker-compose
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose
@@ -18,3 +27,7 @@ install:
   - docker-compose -f docker-compose.yaml build --parallel 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker-compose -f docker-compose.yaml push
+  # remember to set aws env vars 
+  # https://docs.aws.amazon.com/cli/latest/topic/config-vars.html
+  #- aws eks --region us-east-1 update-kubeconfig --name Udagram 
+  #- kubectl apply -f k8/

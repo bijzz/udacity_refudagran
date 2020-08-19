@@ -56,7 +56,7 @@ With log output on the terminal via stdout:
 
 Github Repo / Source Code: [GitHub - bijzz/udacity_refudagran](https://github.com/bijzz/udacity_refudagran)
 
-TravisCI Repo / Continous Integration: [Docker Hub - blumup](https://hub.docker.com/repository/docker/blumup/)
+TravisCI Repo / Continous Integration: [Docker Hub - blumup](https://hub.docker.com/u/blumup)
 
 ### GitHub
 
